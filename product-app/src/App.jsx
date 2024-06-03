@@ -4,11 +4,11 @@ import { Fragment } from "react";
 
 function App() {
   return (
-    <Fragment>
-      <h1>Slowly is the fastest way</h1>
+    <>
+      <h1>Done Slowly is the fastest way</h1>
       <Add />
       <Greetings />
-    </Fragment>
+    </>
   );
 }
 
