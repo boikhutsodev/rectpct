@@ -1,9 +1,14 @@
+import Add from "./components/Add";
+import Greetings from "./components/Greetings";
+import { Fragment } from "react";
+
 function App() {
   return (
-    <form>
-      <label htmlFor="name">Name</label>
-      <input type="text" id="name" />
-    </form>
+    <Fragment>
+      <h1>Slowly is the fastest way</h1>
+      <Add />
+      <Greetings />
+    </Fragment>
   );
 }
 
