@@ -1,13 +1,9 @@
-import React from "react";
-
 function App() {
-  return React.createElement(
-    "form",
-    null,
-    React.createElement("input", {
-      type: "text",
-      placeholder: "Enter your name",
-    })
+  return (
+    <form>
+      <label htmlFor="name">Name</label>
+      <input type="text" id="name" />
+    </form>
   );
 }
 
