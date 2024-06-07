@@ -1,15 +1,13 @@
 function App() {
-  const myName = "Boi Tso";
-  const multiply = (a, b) => a * b;
-  const specialClass = "simple-class";
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 
   return (
     <>
-      <h1>{myName}</h1>
-      <p>2 + 2 = {2 * 3}</p>
-      <p>My Friends List: {["Thabo", "Lebo", "Karabo"]}</p>
-      <p>2 * 5 = {multiply(2, 5)}</p>
-      <p className={specialClass}>Be you!</p>
+      {numbers.map((number) => (
+        <ul>
+          <li>{number}</li>
+        </ul>
+      ))}
     </>
   );
 }
