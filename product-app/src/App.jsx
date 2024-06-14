@@ -1,11 +1,18 @@
 function App() {
   // eg 1
-  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const userInfo = [
+    { id: 1, name: "John", age: 25 },
+    { id: 2, name: "Thabo", age: 30 },
+    { id: 3, name: "Mohau", age: 21 },
+    { id: 4, name: "Bryen", age: 37 },
+  ];
   return (
     <>
-      {numbers.map((number) => (
-        <ul key={Math.random() * 10}>
-          <li>{number}</li>
+      {userInfo.map((user) => (
+        <ul key={Math.random() * userInfo.length}>
+          <li>{user.id}</li>
+          <li>{user.name}</li>
+          <li>{user.age}</li>
         </ul>
       ))}
     </>
