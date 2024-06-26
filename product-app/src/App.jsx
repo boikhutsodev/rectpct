@@ -5,7 +5,7 @@ import React from "react";
 function App() {
   return (
     <>
-      <h1 style={{ background: "lightgrey" }}>Hello I am Boikhutso</h1>
+      <h1>Hello I am Boikhutso</h1>
     </>
   );
 }
