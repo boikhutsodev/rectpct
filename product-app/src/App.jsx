@@ -1,20 +1,26 @@
 import React from "react";
 
 // Watched 1:14:57
-const ValidPassword = () => <h1>Valid Password</h1>;
-const InvalidPassword = () => <h1>Invalid Password</h1>;
 
-const Password = ({ isValid }) => {
-  // if (isValid) {
-  //   return <ValidPassword />;
-  // }
-  // return <InvalidPassword />;
-  return isValid ? <ValidPassword /> : <InvalidPassword />;
+const differentStyle = {
+  color: "blue",
+  fontSize: "50px",
+  textDecoration: "underline",
+  background: "lightGreen",
 };
+
 function App() {
   return (
     <>
-      <Password isValid={false} />
+      <h1
+        style={{
+          color: differentStyle.color,
+          background: differentStyle.background,
+          fontSize: differentStyle.fontSize,
+        }}
+      >
+        Hello I am Boikhutso
+      </h1>
     </>
   );
 }
