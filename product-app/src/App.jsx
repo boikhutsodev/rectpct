@@ -7,7 +7,7 @@ function App() {
     <>
       <div className="container py-4 px-3 mx-auto">
         <h1>Hello, Bootstrap and Vite!</h1>
-        <button className="btn btn-primary">Primary button</button>
+        <button className="btn btn-secondary">Primary button</button>
       </div>
     </>
   );
