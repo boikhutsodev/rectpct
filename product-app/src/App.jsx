@@ -10,7 +10,6 @@ function App() {
         name="Boikhutso WebDev"
         age={18}
         hobbies={["Coding ", "Reading ", "Sleeping ", "Recording "]}
-        realData={{ name: "Gomo", location: "Phokeng" }}
       />
     </>
   );

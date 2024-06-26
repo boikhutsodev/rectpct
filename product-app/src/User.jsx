@@ -1,13 +1,11 @@
 import React from "react";
 
-const User = (props) => {
+const User = ({ img, name, hobbies }) => {
   return (
     <section>
-      <img src={props.img} alt={props.img} />
-      <h1>Name: {props.name}</h1>
-      <h3>Hobbies: {props.hobbies}</h3>
-      <p>{props.realData.name}</p>
-      <p>{props.realData.location}</p>
+      <img src={img} alt={img} />
+      <h1>Name: {name}</h1>
+      <h3>Hobbies: {hobbies}</h3>
     </section>
   );
 };
