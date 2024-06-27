@@ -2,10 +2,14 @@ import React from "react";
 
 // Watched 1:14:57
 
+const Button = () => {
+  return <button>Click</button>;
+};
+
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Button />
     </>
   );
 }
