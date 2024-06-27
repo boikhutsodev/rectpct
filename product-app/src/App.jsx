@@ -1,18 +1,26 @@
 import React from "react";
 
 // Watched 1:14:57
-const handleClick = (a, b) => {
-  console.log(a + b);
-};
+const Copy = () => {
+  const copyHandler = () => {
+    console.log("Stop stealing my information");
+  };
 
-const Button = () => {
-  return <button onClick={() => handleClick(4, 3)}>Click</button>;
+  return (
+    <>
+      <p onCopy={copyHandler}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quod fuga
+        saepe, exercitationem quasi tempore explicabo quia accusamus. Velit,
+        minima.
+      </p>
+    </>
+  );
 };
 
 function App() {
   return (
     <>
-      <Button />
+      <Copy />
     </>
   );
 }
