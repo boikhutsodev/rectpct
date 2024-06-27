@@ -1,26 +1,9 @@
 import React from "react";
 
-// Watched 1:14:57
-const Movie = () => {
-  const moveHandler = () => {
-    console.log("You hoverd on me");
-  };
-  return (
-    <>
-      <p onMouseMove={moveHandler}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit,
-        a.
-      </p>
-    </>
-  );
-};
+// Watched 1:59:57
 
 function App() {
-  return (
-    <>
-      <Movie />
-    </>
-  );
+  return <></>;
 }
 
 export default App;
