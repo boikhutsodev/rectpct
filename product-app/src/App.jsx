@@ -2,25 +2,27 @@ import React from "react";
 
 // Watched 2:11:23
 import { useState } from "react";
-const Counter = () => {
-  const [username, setUsername] = useState("Unknown");
-
-  const changeName = () => {
-    setUsername("BoikhutsoWebDev");
-  };
-
-  return (
-    <>
-      <h1>{username}</h1>
-      <button onClick={changeName}>Change Name</button>
-    </>
-  );
-};
 
 function App() {
+  const [friends, setFriends] = useState(["Thabo", "Zoka", "Thato"]);
+
+  const addOne = () => {
+    setFriends([...friends, "Boikhutso"]);
+  };
+  const removeOne = () => {
+    setFriends(friends.filter((f) => f !== "Zoka"));
+  };
+  const updateOne = () => {};
+
   return (
     <>
-      <Counter />
+      {friends.map((f) => (
+        <li key={Math.random()}>{f}</li>
+      ))}
+
+      <button onClick={addOne}>Add One</button>
+      <button onClick={removeOne}>Remove One</button>
+      <button onClick={updateOne}>Update One</button>
     </>
   );
 }
