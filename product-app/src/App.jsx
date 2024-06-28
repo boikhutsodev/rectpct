@@ -12,7 +12,9 @@ function App() {
   const removeOne = () => {
     setFriends(friends.filter((f) => f !== "Zoka"));
   };
-  const updateOne = () => {};
+  const updateOne = () => {
+    setFriends(friends.map((f) => (f === "Thabo" ? "Thabo Moc" : f)));
+  };
 
   return (
     <>
