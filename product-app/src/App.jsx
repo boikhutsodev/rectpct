@@ -1,22 +1,18 @@
 import React from "react";
 
-// Watched 1:59:57
+// Watched 2:11:23
 import { useState } from "react";
 const Counter = () => {
-  const [count, setCount] = useState(0);
+  const [username, setUsername] = useState("Unknown");
 
-  const increment = () => {
-    setCount(count + 1);
-  };
-  const subtract = () => {
-    setCount(count - 1);
+  const changeName = () => {
+    setUsername("BoikhutsoWebDev");
   };
 
   return (
     <>
-      <h1>{count}</h1>
-      <button onClick={increment}>+</button>
-      <button onClick={subtract}>-</button>
+      <h1>{username}</h1>
+      <button onClick={changeName}>Change Name</button>
     </>
   );
 };
