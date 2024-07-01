@@ -4,27 +4,24 @@ import React from "react";
 import { useState } from "react";
 
 function App() {
-  const [friends, setFriends] = useState(["Thabo", "Zoka", "Thato"]);
+  const [movie, setMovies] = useState({
+    title: "Mathwetwe",
+    retings: 8,
+  });
 
-  const addOne = () => {
-    setFriends([...friends, "Boikhutso"]);
-  };
-  const removeOne = () => {
-    setFriends(friends.filter((f) => f !== "Zoka"));
-  };
-  const updateOne = () => {
-    setFriends(friends.map((f) => (f === "Thabo" ? "Thabo Moc" : f)));
+  const handleClick = () => {
+    const copyMovie = {
+      ...movie,
+      retings: 10,
+    };
+    setMovies(copyMovie);
   };
 
   return (
     <>
-      {friends.map((f) => (
-        <li key={Math.random()}>{f}</li>
-      ))}
-
-      <button onClick={addOne}>Add One</button>
-      <button onClick={removeOne}>Remove One</button>
-      <button onClick={updateOne}>Update One</button>
+      <h1>{movie.title}</h1>
+      <p>Rating: {movie.retings}</p>
+      <button onClick={handleClick}>Change Ratings</button>
     </>
   );
 }
