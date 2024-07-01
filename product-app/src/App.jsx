@@ -10,11 +10,11 @@ function App() {
   });
 
   const handleClick = () => {
-    const copyMovie = {
-      ...movie,
-      retings: 10,
-    };
-    setMovies(copyMovie);
+    // const copyMovie = {
+    //   ...movie,
+    //   retings: 10,
+    // };
+    setMovies({ ...movie, retings: 10 });
   };
 
   return (
