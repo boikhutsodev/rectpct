@@ -1,20 +1,31 @@
 import React from "react";
 
-// Watched 2:27:32
+// Watched 2:44:28
 import { useEffect, useState } from "react";
 
 function App() {
-  const [value, setValue] = useState(0);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    console.log("Hello");
-    document.title = `Increment (${value})`;
-  }, [value]);
+    async function getData() {
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/posts"
+      );
+      const data = await response.json();
+      if (data && data.length) setData(data);
+    }
+    getData();
+  }, []);
 
   return (
     <>
-      <h1>{value}</h1>
-      <button onClick={() => setValue(value + 1)}>Click Me</button>
+      {
+        <ul>
+          {data.map((item) => (
+            <li key={Math.random()}>{item.title}</li>
+          ))}
+        </ul>
+      }
     </>
   );
 }
