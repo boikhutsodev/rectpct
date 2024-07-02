@@ -1,15 +1,27 @@
 import React from "react";
-import { Data } from "./App";
+import { Data, Data1 } from "./App";
 
 const ComponentC = () => {
   return (
     <>
       <Data.Consumer>
-        {([name, age, title]) => {
+        {(name) => {
+          // return (
+          //   <h1>
+          //     My name is: {name} i am: {age} i would love to work as: {title}
+          //   </h1>
+          // );
+
           return (
-            <h1>
-              My name is: {name} i am: {age} i would love to work as: {title}
-            </h1>
+            <Data1.Consumer>
+              {(title) => {
+                return (
+                  <h1>
+                    My name is {name} i am a {title} now
+                  </h1>
+                );
+              }}
+            </Data1.Consumer>
           );
         }}
       </Data.Consumer>

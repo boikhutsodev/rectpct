@@ -7,6 +7,7 @@ import ComponentC from "./ComponentC";
 
 // Contex API
 export const Data = createContext();
+export const Data1 = createContext();
 
 function App() {
   const name = "BoikhutsoDev";
@@ -14,8 +15,10 @@ function App() {
   const title = "Wap Developer";
   return (
     <>
-      <Data.Provider value={[name, age, title]}>
-        <ComponentC />
+      <Data.Provider value={name}>
+        <Data1.Provider value={title}>
+          <ComponentC />
+        </Data1.Provider>
       </Data.Provider>
     </>
   );
