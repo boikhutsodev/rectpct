@@ -9,7 +9,7 @@ const ComponentC = () => {
   return (
     <>
       <h1>
-        My name is: {name} & i am a {title} currently.
+        My name is: {name} i am a {title} currently.
       </h1>
     </>
   );
